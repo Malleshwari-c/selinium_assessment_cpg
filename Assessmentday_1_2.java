@@ -35,7 +35,7 @@ public class day_1_1 {
 		driver.findElement(By.xpath("//div[starts-with(@class,' pdp-add-to-wishlist')]")).click();
 		String url=driver.getCurrentUrl();
 		System.out.println(url);
-		if(url.equals("https://www.myntra.com/login")) {
+		if(url.contains("https://www.myntra.com/login")) {
 			System.out.println("Wish list is Added");
 		}
 		else {
