@@ -1,3 +1,16 @@
+/*Test Case 1 
+
+1.Navigate EaseMyTrip and handle the notification popup.
+2.Select One Way.
+3.Enter any state  in the From field and select a valid suggestion.
+4.Enter another state  in the To field and select a valid suggestion.
+5.Click the Departure Date field.
+6.Select any available future date from the calendar.
+7.Click Traveller & Class.
+8.Select 2 Adults and keep the class as Economy.
+9.Click Search.
+10.Verify that the flight-results page is displayed.
+  */
 //Assessment 3 test case 1
 package assessment;
 
@@ -48,6 +61,15 @@ public class day_3_1 {
 
 }
 
+
+/*Testcase 2
+
+1.NAvigate to demo appa qspiders date picker---  (https://demoapps.qspiders.com/ui/datePick?sublist=0)
+2.Click on calender.
+3. Navigate to the next month in the current year.
+4. Select any valid date from that month.
+5. Verify that the selected date is displayed correctly in the date field.
+  */
 
 //Assessment 3 test case 1
 
