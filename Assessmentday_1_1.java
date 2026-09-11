@@ -6,7 +6,7 @@ On the Products page, use JavaScript Executor to scroll to the bottom of the pag
 Take a screenshot of the page after scrolling.
 Save the screenshot with a meaningful name such as products-page.png.
 */
-
+//Assessment 1 test case 1
 package assessments;
 
 import java.io.File;
