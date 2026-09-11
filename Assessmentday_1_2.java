@@ -58,6 +58,8 @@ public class day_1_1 {
 		else {
 			System.out.println("Not added");
 		}
+		Thread.sleep(2000);
+		driver.quit();
 	}
 
 }
