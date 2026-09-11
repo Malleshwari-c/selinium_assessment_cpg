@@ -1,3 +1,9 @@
+/*Testcase 1:
+1.Navigate to the facebook application.
+2.Click on create new account button.
+3.Verify that fistname and surname textfields are aligned in same line or not.
+CODE:
+*/
 //Assessment 2 test case 1
 package assessment;
 
@@ -31,6 +37,15 @@ public class day_2_1 {
         }
     }
 }
+
+/*
+//Testcase 2:
+1.Navigate to facebook application 
+2.capture the location of create new account button.
+3.Capture the Dom Attribute and dom property for email address textfield before and after entering email address
+4.click on create new account capture the size of submit button
+5.capture the css properties of submit button (minimum 3).
+*/
 
 //Assessment 2 test case 2
 package assessment;
@@ -78,6 +93,17 @@ public class day_2_2 {
         System.out.println("Font Size: "+submitButton.getCssValue("font-size"));
     }
 }
+
+/*
+//Testcase 3: 
+
+1.Navigate to demowebshop
+2.Identify the webelement(14.1-inch laptop)-->identify add to cart button capture the size and them click on the buuton.
+3.Click on shopping cart link.
+4.verify remove check box is selected or not and capture the complete information using getRect().
+5.Verify Alert message is displayed or not before and after clicking on Apply coupon button
+6.Take screenshot of image(Laptop).
+*/
 
 
 //Assessment 3 test case 3
