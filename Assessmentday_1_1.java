@@ -1,3 +1,12 @@
+/*
+TestCase-1
+Launch SauceDemo.
+Login using the valid credentials provided on the application.
+On the Products page, use JavaScript Executor to scroll to the bottom of the page.
+Take a screenshot of the page after scrolling.
+Save the screenshot with a meaningful name such as products-page.png.
+*/
+
 package assessments;
 
 import java.io.File;
