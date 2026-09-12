@@ -1,3 +1,65 @@
+/*1.Navigate to DemoWebshop application 
+2.Click on login link .
+3.Enter email and password and click on login button by reading the data from property file.
+*/
+//Assessment 5 test case 1
+package Assessments;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Day_5_1 {
+	public static void main(String[] args) throws IOException, InterruptedException {
+		//Create FileInputStream to read Properties file
+		FileInputStream fis=new FileInputStream("./src/test/resources/DDT/data.properties");
+		//Create Properties object 
+		Properties pro=new Properties();
+		//load the Properties file to the load method
+		pro.load(fis);
+		//get the properties 
+		String BROWSER=pro.getProperty("browser");
+		// launching the browser
+		WebDriver driver=null;
+		if(BROWSER.equals("chrome")) {
+			driver=new ChromeDriver();
+		}
+		if(BROWSER.equals("edge")) {
+			driver=new EdgeDriver();
+		}
+		if(BROWSER.equals("firefox")) {
+			driver=new FirefoxDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		String URL=pro.getProperty("url");
+		String UN=pro.getProperty("username");
+		String PW=pro.getProperty("pw");
+		//naviagte to url
+		driver.get(URL);
+		//click login button
+		driver.findElement(By.xpath("//a[.='Log in']")).click();
+		//enter email and password
+		driver.findElement(By.id("Email")).sendKeys(UN);
+		driver.findElement(By.id("Password")).sendKeys(PW);
+		//click on login submit button
+		driver.findElement(By.cssSelector("[class='button-1 login-button']")).click();
+		Thread.sleep(2000);
+		//close the browser
+		driver.quit();
+
+		
+	}
+
+}
+
 /*
 1.Navigate to orange Hrm application
 2.Enter the username password and click on login buuton
