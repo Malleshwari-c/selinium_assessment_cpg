@@ -124,3 +124,67 @@ public class Day_5_2 {
 	}
 
 }
+
+
+package Assessments;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Day_5_3 {
+	public static void main(String[] args) throws  IOException, ParseException, InterruptedException {
+		//Read file json using FileReader 
+		FileReader fis=new FileReader("./src/test/resources/DDT/Ass_data.json");
+		//jsonPRaser class
+		JSONParser jsonparser=new JSONParser();
+		//we are getting java object from parse 
+		Object javaobj=jsonparser.parse(fis);
+		//downcasting to get the java to json
+		JSONObject json=(JSONObject)javaobj;
+		//get the elements from json
+		String BROWSER=json.get("browser").toString();
+		String URL=json.get("url").toString();
+		String NAME=json.get("name").toString();
+		String EMAIL=json.get("username").toString();
+		String PW=json.get("pw").toString();
+		//launch browser
+		WebDriver driver=null;
+		if(BROWSER.equals("chrome")) {
+			driver=new ChromeDriver();
+		}
+		if(BROWSER.equals("edge")) {
+			driver=new EdgeDriver();
+		}
+		
+		if(BROWSER.equals("firefox")) {
+			driver=new FirefoxDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//navigate to url
+		driver.get(URL);
+		//send name,email,password
+		driver.findElement(By.id("name")).sendKeys(NAME);
+		driver.findElement(By.id("email")).sendKeys(EMAIL);
+		driver.findElement(By.id("password")).sendKeys(PW);
+		//click login
+		driver.findElement(By.xpath("//button[.='Register']")).click();
+		Thread.sleep(2000);
+		//close browser
+		driver.quit();
+	}
+
+}
+
