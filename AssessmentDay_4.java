@@ -1,10 +1,4 @@
-/*
-  Testcase1:
-  1.Navigate to any application
-  2.count all the textfields
-  3.get the size of each textfield
-  4.verify my giving input to any of the textfield among all
-*/
+
 //Assessment 4 test case 1
 package assessment;
 
@@ -38,6 +32,42 @@ public class day_4_1 {
 		System.out.println(verify.getText());
 		Thread.sleep(2000);
 		//close the browser
+		driver.quit();
+	}
+
+}
+
+
+//Assessment 4 test case 2
+package assessment;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class day_4_2 {
+	public static void main(String[] args) throws InterruptedException {
+		//Launch the browser
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//navigate to url
+		driver.get("https://www.instagram.com/");
+		//find text fields from the pages
+		List<WebElement> l = driver.findElements(By.xpath("//input[@dir='ltr']"));
+		//get the size
+		System.out.println(l.size());
+		for(WebElement ele:l) {
+			//send the keys
+			if("_r_4_".equals(ele.getDomAttribute("id")) )
+		    {
+		        ele.sendKeys("malli@gmail.com");
+		    }
+		}
+		Thread.sleep(2000);
+		//close
 		driver.quit();
 	}
 
