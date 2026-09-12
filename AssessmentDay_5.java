@@ -124,8 +124,12 @@ public class Day_5_2 {
 	}
 
 }
-
-
+/*
+1.Navigate to Demoappsqspiders application
+2.Enter name, email,password and click on login  submit button
+3.Read the data from json file.
+*/
+//Assessment 5 test case 3
 package Assessments;
 
 import java.io.FileInputStream;
