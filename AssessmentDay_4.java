@@ -118,19 +118,12 @@ public class day_4_3
 	{
 		//Launch the browser
 		WebDriver driver=new ChromeDriver();
-		
-		//Maximize the browser window
 		driver.manage().window().maximize();
-		
-		//apply implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		
 		//Navigate to the bigbasket application
 		driver.get("https://www.bigbasket.com/pb/boss/");
-		
 		//search for any product
 		driver.findElement(By.xpath("(//input[@placeholder='Search for Products...'])[2]")).sendKeys("Apples");
-
 		//select required product and add to cart
 		List<WebElement> allmatches=driver.findElements(By.xpath("//ul[@class='overscroll-contain']/li"));
 		for(WebElement ele : allmatches)
@@ -143,18 +136,17 @@ public class day_4_3
 			}
 			
 		}
-		
 		//after clicking on add and then we need to verify that it is added or not
 		WebElement verify=driver.findElement(By.xpath("//p[text()='Item has been added to your basket successfully']"));
 		
 		//verify
-		if(verify.isDisplayed())
+		if(verify.isDisplayed()){
 			System.out.println(verify.getText());
-		else
+		}
+		else{
 			System.out.println("Item has Not Added to your basket");
-		
+		}
 		Thread.sleep(2000);
-		
 		//close the browser
 		driver.quit();
 	}
