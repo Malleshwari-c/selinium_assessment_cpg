@@ -4,6 +4,7 @@ click on Admin link -> enter username , select role ,enter employee name and sel
 ->verify whether the emplyoee is added from the records found section and logout.
 Note: store the common data in property file and testscript data in excel file.*/
 
+//Assessment 6
 package Assessments;
 
 import java.io.FileInputStream;
