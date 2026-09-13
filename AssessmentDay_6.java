@@ -73,7 +73,7 @@ public class Day_6
         // Apply implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-        // 1. Navigate to orangeHrm application
+        // Navigate to URL
         driver.get(url);
         Thread.sleep(2000);
         
