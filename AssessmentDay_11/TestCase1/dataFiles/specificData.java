@@ -10,7 +10,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class specificData {
 	public String vacnacyName, description, hiringManager,Jobtitle,Position;
 	public void spData() throws IOException {
-		FileInputStream fis=new FileInputStream("./src/test/resources/DDT1/Assessment11.xlsx");
+		FileInputStream fis=new FileInputStream("./src/test/resources/DDT1/Assessment12.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh=wb.getSheet("Sheet2");
 		vacnacyName=sh.getRow(1).getCell(0).getStringCellValue();
