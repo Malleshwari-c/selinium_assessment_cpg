@@ -42,22 +42,30 @@ Robot r;
 		System.out.println("filling started");
 		vacancyName.sendKeys(VN);
 		System.out.println("vaname entered");
+		
 		selectClick.click();
         Thread.sleep(2000);
         r.keyPress(KeyEvent.VK_DOWN);
         r.keyRelease(KeyEvent.VK_DOWN);
+		
         r.keyPress(KeyEvent.VK_DOWN);
         r.keyRelease(KeyEvent.VK_DOWN);
+		
         r.keyPress(KeyEvent.VK_ENTER);
         r.keyRelease(KeyEvent.VK_ENTER);
         Thread.sleep(2000);
 		System.out.println("click selection");
+		
 		description.sendKeys(des);
 		System.out.println("descript entered");
+		
 		hiringManager.sendKeys(HM);
 		System.out.println("HM entered");
+		
 		noPosition.sendKeys(Pos);
 		System.out.println("Position entered");
+
+		
 		saveClick.click();
 		System.out.println("saved succesfully");;
 	}
