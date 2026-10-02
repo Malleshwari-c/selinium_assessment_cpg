@@ -1,0 +1,6 @@
+From,To,Flight,Airline,Price,Name,City,State,Zipcode,Creditnum,Credityear
+Paris,Rome,43,Virgin America,$472.56,Malli,ballari,KA,583101,9019960147,2028
+Rome,Mexico City,234,United Airlines,$432.98,Banny,ballari,KA,583101,1234567890,2028
+Portland,London,9696,Aer Lingus,$200.98,Krishna,ballari,KA,583101,3216549870,2028
+Boston,Berlin,12,Virgin America,$765.32,Geetha,ballari,KA,583101,2589614702,2028
+Rome,Dublin,4946,Lufthansa,$233.98,Ram,ballri,KA,583101,4567891237,2028
